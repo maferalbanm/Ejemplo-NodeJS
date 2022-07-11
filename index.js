@@ -1,8 +1,7 @@
-const express=require('express');
-const app=express();
-const port = 3000
-app.use(express.json());
-app.use(express.static('public'));
+const express = require("express"),
+    path = require("path"),
+    app = express(),
+    puerto = process.env.PORT||3000; 
 app.set('nombreApp','Aplicacion para manejo de gastos SRI');
 console.log(app.get('nombreApp'));
 
