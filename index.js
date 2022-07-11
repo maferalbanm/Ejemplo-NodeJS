@@ -19,15 +19,7 @@ app.get('/misitio', (req,res)=>{
     <a href="/misitio/about"><h2 align="center">Acerca de nosotros</h2></a>
     </Body`);
 });
-app.get('/misitio/gastos', (req,res)=>{
-    res.json(
-    {
-    gasto:'Salud',
-    monto:14575.60,
-    informacion:'Corresponde a consultas medicas, pagos de seguros, medicinas'
-    }
-    );
-});
+
 
 app.get('/misitio/about', (req,res)=>{
     res.send(`<Body background="https://img.freepik.com/vector-gratis/fondo-rosa-acuarela_1082-131.jpg?w=2000">
