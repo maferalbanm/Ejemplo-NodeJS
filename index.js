@@ -1,13 +1,13 @@
 const express = require("express"),
     path = require("path"),
-    app = express(),
-    puerto = process.env.PORT||3000; 
-app.set('nombreApp','Aplicacion para manejo de gastos SRI');
-console.log(app.get('nombreApp'));
+    app = express();
 
-app.listen(app.get('puerto'), ()=>{
-    console.log('Nombre de la App:',app.get('nombreApp'));
-   })
+
+const PORT = process.env.PORT||4000
+console.log({PORT})
+app.listen(PORT, function(){
+   console.log('Servidor escuchando en el puerto ' + PORT);
+})
   
 app.get('/misitio', (req,res)=>{
  res.send(`<Body background="https://img.freepik.com/vector-gratis/fondo-rosa-acuarela_1082-131.jpg?w=2000">
@@ -31,6 +31,3 @@ app.get('/misitio/about', (req,res)=>{
     </Body`);
 });
 
-app.listen(port, ()=>{
- console.log('Servidor escuchando en el puerto ' + port);
-})
